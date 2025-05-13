@@ -34,4 +34,13 @@ describe('Scenarios where authentication is a pre-condition', () => {
       .its('state')
       .should('be.equal', 'Complete')
   })
+
+  it.only('logs out', () => {
+    cy.visit('/')
+    cy.wait('@getNotes')
+
+    cy.contains('.nav a', 'Logout').click()
+
+    cy.get('#email').should('be.visible')
+  })
 })
