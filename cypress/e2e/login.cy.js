@@ -1,3 +1,4 @@
+/// <reference path="../support/commands.d.ts" />
 // cypress/e2e/login.cy.js
 
 describe('Login', () => {
